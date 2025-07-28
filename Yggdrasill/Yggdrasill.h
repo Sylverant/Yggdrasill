@@ -1,32 +1,17 @@
-
-// Yggdrasill.h : main header file for the PROJECT_NAME application
-//
-
 #pragma once
 
 #ifndef __AFXWIN_H__
-	#error "include 'pch.h' before including this file for PCH"
+    #error "include 'pch.h' before including this file for PCH"
 #endif
 
-#include "resource.h"		// main symbols
+#include "resource.h"
 
+class CYggdrasillApp : public CWinApp {
+    public:
+        CYggdrasillApp();
 
-// CYggdrasillApp:
-// See Yggdrasill.cpp for the implementation of this class
-//
-
-class CYggdrasillApp : public CWinApp
-{
-public:
-	CYggdrasillApp();
-
-// Overrides
-public:
-	virtual BOOL InitInstance();
-
-// Implementation
-
-	DECLARE_MESSAGE_MAP()
+        virtual BOOL InitInstance();
+        DECLARE_MESSAGE_MAP()
 };
 
 extern CYggdrasillApp theApp;
