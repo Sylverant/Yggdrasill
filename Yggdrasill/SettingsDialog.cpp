@@ -1,6 +1,6 @@
 /*
     This file is part of Yggdrasill
-    Copyright (C) 2025 Lawrence Sebald
+    Copyright (C) 2025, 2026 Lawrence Sebald
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License version 3 as
@@ -19,6 +19,7 @@
 #include "Yggdrasill.h"
 #include "afxdialogex.h"
 #include "SettingsDialog.h"
+#include "SNAKDialog.h"
 
 IMPLEMENT_DYNAMIC(SettingsDialog, CDialog)
 
@@ -93,6 +94,7 @@ BEGIN_MESSAGE_MAP(SettingsDialog, CDialog)
     ON_BN_CLICKED(IDC_SETTING_BORDERLESS, &SettingsDialog::OnClickedSettingBorderless)
     ON_BN_CLICKED(IDC_SETTING_WINDOWED, &SettingsDialog::OnClickedSettingWindowed)
     ON_BN_CLICKED(IDC_SETTING_BORDERLESS_STRETCH, &SettingsDialog::OnClickedSettingBorderlessStretch)
+    ON_BN_CLICKED(IDC_SNAK_BUTTON, &SettingsDialog::OnBnClickedSnakButton)
 END_MESSAGE_MAP()
 
 
@@ -156,4 +158,13 @@ void SettingsDialog::OnClickedSettingWindowed() {
     UpdateData(TRUE);
     m_windowHeight.EnableWindow(TRUE);
     m_windowWidth.EnableWindow(TRUE);
+}
+
+void SettingsDialog::OnBnClickedSnakButton() {
+    SNAKDialog dlg;
+    INT_PTR nResponse = dlg.DoModal();
+
+    if(nResponse == -1) {
+        TRACE(traceAppMsg, 0, "Warning: dialog creation failed...\n");
+    }
 }

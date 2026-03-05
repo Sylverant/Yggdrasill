@@ -8,6 +8,7 @@
 #define IDD_YGGDRASILL_DIALOG           102
 #define IDR_MAINFRAME                   128
 #define IDD_SETTINGS_DIALOG             131
+#define IDD_SNAK_DIALOG                 135
 #define IDC_OFFLINE_BUTTON              1000
 #define IDC_ONLINE_BUTTON               1001
 #define IDC_SETTINGS_BUTTON             1002
@@ -33,14 +34,18 @@
 #define IDC_SETTING_BORDERLESS          1023
 #define IDC_RADIO1                      1025
 #define IDC_SETTING_BORDERLESS_STRETCH  1025
+#define IDC_SNAK_BUTTON                 1026
+#define IDC_SNAK_SERIAL                 1027
+#define IDC_SNAK_ACCESS                 1028
+#define IDC_SNAK_EMAIL                  1030
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        135
+#define _APS_NEXT_RESOURCE_VALUE        137
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1026
+#define _APS_NEXT_CONTROL_VALUE         1031
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif
