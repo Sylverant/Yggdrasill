@@ -196,7 +196,7 @@ static uint32_t find_ptr(DWORD secSz, const uint8_t *data, uint32_t search,
     return 0;
 }
 
-#define NUM_SERVER_ADDRS 6
+#define NUM_SERVER_ADDRS 8
 
 static const char *server_addrs[NUM_SERVER_ADDRS] = {
     "pso20.sonic.isao.net",
@@ -204,7 +204,9 @@ static const char *server_addrs[NUM_SERVER_ADDRS] = {
     "pso-mp01.sonic.isao.net",
     "gsproduc.ath.cx",
     "psobb.dyndns.org",
-    "sylverant.net"
+    "sylverant.net",
+    "pso22.sonic.isao.net",
+    "ss701.sonicteam.com"
 };
 
 static bool patch_server_addr(DWORD secSz, uint8_t *data) {
