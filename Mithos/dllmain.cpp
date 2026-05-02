@@ -1,6 +1,6 @@
 /*
     This file is part of Mithos
-    Copyright (C) 2012, 2013, 2025 Lawrence Sebald
+    Copyright (C) 2012, 2013, 2025, 2026 Lawrence Sebald
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License version 3 as
@@ -248,7 +248,7 @@ static bool patch_server_addr(DWORD secSz, uint8_t *data) {
 
 static bool music_patch(DWORD secSz, uint8_t *data) {
     uint32_t mambo, chu, duel1, duel2, mamboptr, chu2byo;
-    
+
     if(!(mambo = find_string(secSz, data, "mambo.adx")))
         return false;
 
@@ -287,7 +287,7 @@ static uint8_t *map_patch_one(DWORD secSz, uint8_t *data, const char *mapbase,
                               const char *map, uint8_t *stab, uint32_t mapptr) {
     uint32_t map00_loc, mapbase_loc, map00_ptr, map00_ptr_ptr, val;
 
-    /* Find all the pointers we care about... 
+    /* Find all the pointers we care about...
        map00_loc = location of mapbase_00 string (i.e, map_acave01_00)
        mapbase_loc = location of mapbase string (i.e, map_acave01)
        map00_ptr = location of pointer to map00_loc
@@ -627,7 +627,7 @@ DWORD WINAPI hider_window_thread(LPVOID lpParam) {
     EnableWindow(fsWnd, FALSE);
 
     while(GetMessageA(&msg, NULL, 0, 0)) {
-        TranslateMessage(&msg);						
+        TranslateMessage(&msg);
         DispatchMessageA(&msg);
     }
 
